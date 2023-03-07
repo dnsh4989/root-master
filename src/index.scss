@@ -1,1 +1,25 @@
-@import "/src/styles/main.scss";
+@font-face {
+  font-family: "LEMONMILK-Regular";
+  src: local("LEMONMILK-Regular"),
+    url("./styles/fonts/LEMONMILK-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "LEMONMILK-Medium";
+  src: local("LEMONMILK-Medium"),
+    url("./styles/fonts/LEMONMILK-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "LEMONMILK-Bold";
+  src: local("LEMONMILK-Bold"),
+    url("./styles/fonts/LEMONMILK-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Chocolates-Regular";
+  src: local("Chocolates-Regular"),
+    url("./styles/fonts/TT\ Chocolates\ Trial\ Regular.otf") format("opentype");
+}
+
+@import "src/styles/main-styles.scss";
