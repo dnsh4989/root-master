@@ -17,8 +17,8 @@ body {
     display: block;
     font-size: 9rem;
     font-weight: 400;
-    letter-spacing: 3.5rem;
-    animation-name: moveInLeft;
+    letter-spacing: 2rem;
+    animation-name: moveInRight;
     animation-duration: 1s;
     animation-timing-function: ease-out;
     font-family: "LEMONMILK-Medium";
@@ -46,11 +46,14 @@ body {
     font-family: "LEMONMILK-Medium";
 
     color: #fe4d5a;
-    font-size: 3rem;
+    font-size: 5rem;
     position: absolute;
-    top: 17rem;
+    top: 34rem;
+    left: 32rem;
     z-index: 5;
-    text-shadow: 0.15rem 0.2rem rgba($color-black, 0.22);
+    text-shadow: 0.1rem 0.4rem 1.2rem rgba($color-black, 0.56);
+
+    // text-shadow: 1px 1px 16px rgba(0,0,0,0.66);
   }
 }
 

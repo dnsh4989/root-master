@@ -9,7 +9,10 @@
 .moon {
   position: relative;
   top: 4rem;
-  right: 2rem; }
+  right: 2rem;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out; }
 
 .circle-1 {
   background-color: #172d47;
@@ -188,7 +191,10 @@
   margin-bottom: 26px;
   margin-top: 35px;
   margin-left: 20px;
-  transform: scale(1.25); }
+  transform: scale(1.25);
+  animation-name: moveInRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-out; }
 
 .dots {
   position: absolute;
@@ -357,3 +363,13 @@
     transform: translateX(-1rem) translateY(-1rem); }
   100% {
     transform: translateX(0rem) translateY(0rem); } }
+
+.font-size-6 {
+  font-size: 6rem !important; }
+
+.section2 {
+  height: 100%;
+  background: #000;
+  transform: scaleX(1.12) translateX(-4rem);
+  z-index: 20;
+  position: relative; }
