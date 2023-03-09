@@ -1,0 +1,23 @@
+.content-container {
+  position: absolute;
+  top: 0rem;
+  right: -25rem;
+  width: 100%;
+  height: 100%;
+}
+.back-clouds {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 25rem !important;
+  right: 32rem !important;
+  transform: scale(1.65);
+}
+.front-clouds {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0rem !important;
+  right: 20rem !important;
+  z-index: 10;
+}
