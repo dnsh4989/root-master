@@ -59,6 +59,58 @@ ORDER: Base + typography > general layout + grid > page layout > components
     opacity: 1;
     transform: translateX(0); } }
 
+/* Add a class to hide the current page content during the transition */
+.leave-from-top {
+  animation: slide-leave-from-top 0.2s ease-out; }
+
+.leave-from-bottom {
+  animation: slide-leave-from-bottom 0.2s ease-out; }
+
+.hide {
+  visibility: hidden;
+  opacity: 0;
+  display: none; }
+
+.enter-from-bottom {
+  animation: slide-enter-from-bottom 0.5s ease-out; }
+
+.enter-from-top {
+  animation: slide-enter-from-top 0.5s ease-out; }
+
+/* Define the slide-up animation */
+@keyframes slide-enter-from-bottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0; }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
+
+@keyframes slide-enter-from-top {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0; }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
+
+/* Define the slide-enter animation */
+@keyframes slide-leave-from-top {
+  0% {
+    transform: translateY(0);
+    opacity: 0; }
+  100% {
+    transform: translateY(-100%);
+    opacity: 1; } }
+
+@keyframes slide-leave-from-bottom {
+  0% {
+    transform: translateY(0);
+    opacity: 0; }
+  100% {
+    transform: translateY(100%);
+    opacity: 1; } }
+
 *,
 *::after,
 *::before {
@@ -93,7 +145,20 @@ body {
     animation-duration: 1s;
     animation-timing-function: ease-out;
     font-family: "LEMONMILK-Medium";
-    line-height: 12rem; }
+    line-height: 12rem;
+    opacity: 1; }
+  .heading-primary--hide {
+    display: block;
+    font-size: 9rem;
+    font-weight: 400;
+    letter-spacing: 2rem;
+    animation-name: moveInTop;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    font-family: "LEMONMILK-Medium";
+    line-height: 12rem;
+    opacity: 0;
+    display: none; }
   .heading-primary--sub {
     display: block;
     font-size: 2.5rem;

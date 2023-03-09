@@ -23,6 +23,21 @@ body {
     animation-timing-function: ease-out;
     font-family: "LEMONMILK-Medium";
     line-height: 12rem;
+    opacity: 1;
+  }
+
+  &--hide {
+    display: block;
+    font-size: 9rem;
+    font-weight: 400;
+    letter-spacing: 2rem;
+    animation-name: moveInTop;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    font-family: "LEMONMILK-Medium";
+    line-height: 12rem;
+    opacity: 0;
+    display: none;
   }
 
   &--sub {

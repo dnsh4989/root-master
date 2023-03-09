@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import PrevWorks from "../../components/PrevWorks/PrevWorks";
 
 const Home = () => {
   const layer1: any = [useRef(""), useRef(""), useRef("")];
@@ -15,11 +16,135 @@ const Home = () => {
   const triggerFrameChange = (mode: string) => {
     if (mode === "up") {
       if (screenNumber > 1) {
-        setScreenNumber(screenNumber - 1);
+        goToPrevPage();
       }
     } else if (mode === "down") {
-      setScreenNumber(screenNumber + 1);
+      goToNextPage();
     }
+  };
+
+  const goToNextPage = async () => {
+    document
+      ?.querySelector("#screen-" + screenNumber)
+      ?.classList.remove("enter-from-bottom");
+    document
+      ?.querySelector("#screen-" + screenNumber)
+      ?.classList.remove("enter-from-top");
+
+    document
+      ?.querySelector("#screen-" + screenNumber)
+      ?.classList.add("leave-from-top");
+
+    document
+      ?.querySelector("#content-" + screenNumber)
+      ?.classList.remove("enter-from-bottom");
+    document
+      ?.querySelector("#content-" + screenNumber)
+      ?.classList.remove("enter-from-top");
+
+    document
+      ?.querySelector("#content-" + screenNumber)
+      ?.classList.add("leave-from-top");
+
+    await new Promise((r) => setTimeout(r, 200));
+
+    document?.querySelector("#screen-" + screenNumber)?.classList.add("hide");
+
+    document
+      ?.querySelector("#screen-" + (screenNumber + 1))
+      ?.classList.remove("leave-from-top");
+    document
+      ?.querySelector("#screen-" + (screenNumber + 1))
+      ?.classList.remove("leave-from-bottom");
+
+    document
+      ?.querySelector("#screen-" + (screenNumber + 1))
+      ?.classList.remove("hide");
+
+    document
+      ?.querySelector("#screen-" + (screenNumber + 1))
+      ?.classList.add("enter-from-bottom");
+
+    document?.querySelector("#content-" + screenNumber)?.classList.add("hide");
+
+    document
+      ?.querySelector("#content-" + (screenNumber + 1))
+      ?.classList.remove("leave-from-top");
+    document
+      ?.querySelector("#content-" + (screenNumber + 1))
+      ?.classList.remove("leave-from-bottom");
+
+    document
+      ?.querySelector("#content-" + (screenNumber + 1))
+      ?.classList.remove("hide");
+
+    document
+      ?.querySelector("#content-" + (screenNumber + 1))
+      ?.classList.add("enter-from-bottom");
+
+    setScreenNumber(screenNumber + 1);
+  };
+
+  const goToPrevPage = async () => {
+    document
+      ?.querySelector("#screen-" + screenNumber)
+      ?.classList.remove("enter-from-bottom");
+    document
+      ?.querySelector("#screen-" + screenNumber)
+      ?.classList.remove("enter-from-top");
+
+    document
+      ?.querySelector("#screen-" + screenNumber)
+      ?.classList.add("leave-from-bottom");
+
+    document
+      ?.querySelector("#content-" + screenNumber)
+      ?.classList.remove("enter-from-bottom");
+    document
+      ?.querySelector("#content-" + screenNumber)
+      ?.classList.remove("enter-from-top");
+
+    document
+      ?.querySelector("#content-" + screenNumber)
+      ?.classList.add("leave-from-bottom");
+
+    await new Promise((r) => setTimeout(r, 200));
+
+    document?.querySelector("#screen-" + screenNumber)?.classList.add("hide");
+
+    document
+      ?.querySelector("#screen-" + (screenNumber - 1))
+      ?.classList.remove("leave-from-top");
+    document
+      ?.querySelector("#screen-" + (screenNumber - 1))
+      ?.classList.remove("leave-from-bottom");
+
+    document
+      ?.querySelector("#screen-" + (screenNumber - 1))
+      ?.classList.remove("hide");
+
+    document
+      ?.querySelector("#screen-" + (screenNumber - 1))
+      ?.classList.add("enter-from-top");
+
+    document?.querySelector("#content-" + screenNumber)?.classList.add("hide");
+
+    document
+      ?.querySelector("#content-" + (screenNumber - 1))
+      ?.classList.remove("leave-from-top");
+    document
+      ?.querySelector("#content-" + (screenNumber - 1))
+      ?.classList.remove("leave-from-bottom");
+
+    document
+      ?.querySelector("#content-" + (screenNumber - 1))
+      ?.classList.remove("hide");
+
+    document
+      ?.querySelector("#content-" + (screenNumber - 1))
+      ?.classList.add("enter-from-top");
+
+    setScreenNumber(screenNumber - 1);
   };
 
   const handleScroll = (event: any) => {
@@ -58,6 +183,10 @@ const Home = () => {
     const y0 = 38 - event.clientY / 400;
     const y1 = 45 - event.clientY / 400;
     const y2 = 54 - event.clientY / 300;
+
+    if (!layer1[0].current) {
+      return;
+    }
 
     layer1[0].current.style.right = x0 + "rem";
     layer1[1].current.style.right = x1 + "rem";
@@ -178,36 +307,35 @@ const Home = () => {
           <div className="row">
             <div className="col-1-of-4">
               <div className="header__text-box">
-                {screenNumber === 1 && (
-                  <h1 className="heading-primary main-title">
-                    <span className="heading-primary--main">
-                      DineSh <br />
-                      SanaLa
-                    </span>
-                    <div className="red-line-seperation">
-                      <span className="red-line"></span>
-                      <span className="red-line2"></span>
-                    </div>
-                    <span className="heading-primary--sub">
-                      Web Developer / <br /> FrontEnd Engineer.
-                    </span>
-                  </h1>
-                )}
-                {screenNumber === 2 && (
-                  <h1 className="heading-primary main-title">
-                    <span className="heading-primary--main font-size-6">
-                      Previous <br />
-                      Works
-                    </span>
-                    <div className="red-line-seperation">
-                      <span className="red-line"></span>
-                      <span className="red-line2"></span>
-                    </div>
-                    <span className="heading-primary--sub">
-                      Projects / <br /> Web Applications.
-                    </span>
-                  </h1>
-                )}
+                <h1 id="screen-1" className={`heading-primary main-title`}>
+                  <span className="heading-primary--main">
+                    DineSh <br />
+                    SanaLa
+                  </span>
+                  <div className="red-line-seperation">
+                    <span className="red-line"></span>
+                    <span className="red-line2"></span>
+                  </div>
+                  <span className="heading-primary--sub">
+                    Web Developer / <br /> FrontEnd Engineer.
+                  </span>
+                </h1>
+                <h1
+                  id="screen-2"
+                  className={`leave hide heading-primary main-title`}
+                >
+                  <span className="heading-primary--main font-size-6">
+                    Previous <br />
+                    Works
+                  </span>
+                  <div className="red-line-seperation">
+                    <span className="red-line"></span>
+                    <span className="red-line2"></span>
+                  </div>
+                  <span className="heading-primary--sub">
+                    Projects / <br /> Web Applications.
+                  </span>
+                </h1>
               </div>
             </div>
             <div className="col-3-of-4">
@@ -217,26 +345,20 @@ const Home = () => {
                     <div className="circle-3 circle-it">
                       <div className="circle-4 circle-it">
                         <div className="circle-5 circle-it">
-                          {screenNumber === 1 && (
-                            <div className="circle-6 circle-it">
-                              <div className="moon-white">
-                                <div className="crate-1"></div>
-                                <div className="crate-2"></div>
-                                <div className="crate-3"></div>
-                              </div>
-                              <div className="cloud-4" ref={layer4[0]}></div>
-                              <div className="cloud-5" ref={layer4[1]}></div>
-                              <div className="cloud-6" ref={layer4[2]}></div>
+                          <div id="content-1" className="circle-6 circle-it">
+                            <div className="moon-white">
+                              <div className="crate-1"></div>
+                              <div className="crate-2"></div>
+                              <div className="crate-3"></div>
                             </div>
-                          )}
-                          {screenNumber === 2 && (
-                            <div className="circle-6 circle-it">
-                              <div className="row section2">
-                                <div className="col-1-of-2">Test 1</div>
-                                <div className="col-1-of-2">Test 2</div>
-                              </div>
-                            </div>
-                          )}
+                            <div className="cloud-4" ref={layer4[0]}></div>
+                            <div className="cloud-5" ref={layer4[1]}></div>
+                            <div className="cloud-6" ref={layer4[2]}></div>
+                          </div>
+
+                          <div className="hide" id="content-2">
+                            <PrevWorks />
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -254,34 +376,30 @@ const Home = () => {
                     <div className="cloud-3" ref={layer1[2]}></div>
                   </>
                 )}
-                {screenNumber === 1 && (
-                  <>
-                    <div className="dots-container" ref={layer5[0]}>
-                      <div className="dots dot-1"></div>
-                      <div className="dots dot-2"></div>
-                      <div className="dots dot-3"></div>
-                      <div className="dots dot-4"></div>
-                      <div className="dots dot-5"></div>
-                      <div className="dots dot-6"></div>
-                      <div className="dots dot-7"></div>
-                      <div className="dots dot-8"></div>
-                      <div className="dots dot-9"></div>
-                      <div className="dots dot-10"></div>
-                      <div className="dots dot-11"></div>
-                      <div className="dots dot-12"></div>
-                      <div className="dots dot-13"></div>
-                      <div className="dots dot-14"></div>
-                      <div className="dots dot-15"></div>
-                      <div className="dots dot-16"></div>
-                      <div className="dots dot-17"></div>
-                      <div className="dots dot-18"></div>
-                      <div className="dots dot-19"></div>
-                      <div className="dots dot-20"></div>
-                      <div className="dots dot-21"></div>
-                      <div className="dots dot-22"></div>
-                    </div>
-                  </>
-                )}
+                <div className="dots-container" ref={layer5[0]}>
+                  <div className="dots dot-1"></div>
+                  <div className="dots dot-2"></div>
+                  <div className="dots dot-3"></div>
+                  <div className="dots dot-4"></div>
+                  <div className="dots dot-5"></div>
+                  <div className="dots dot-6"></div>
+                  <div className="dots dot-7"></div>
+                  <div className="dots dot-8"></div>
+                  <div className="dots dot-9"></div>
+                  <div className="dots dot-10"></div>
+                  <div className="dots dot-11"></div>
+                  <div className="dots dot-12"></div>
+                  <div className="dots dot-13"></div>
+                  <div className="dots dot-14"></div>
+                  <div className="dots dot-15"></div>
+                  <div className="dots dot-16"></div>
+                  <div className="dots dot-17"></div>
+                  <div className="dots dot-18"></div>
+                  <div className="dots dot-19"></div>
+                  <div className="dots dot-20"></div>
+                  <div className="dots dot-21"></div>
+                  <div className="dots dot-22"></div>
+                </div>
               </div>
             </div>
           </div>
