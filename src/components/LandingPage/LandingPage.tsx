@@ -195,7 +195,7 @@ function LandingPage() {
               )}
               {screenNumber === 2 && (
                 <h1 className="heading-primary main-title">
-                  <span className="heading-primary--main font-size-6">
+                  <span className="heading-primary--main font-size-4">
                     Previous <br />
                     Works
                   </span>

@@ -4,10 +4,17 @@
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 75vh;
+  height: 25rem;
+  width: 90%;
+
+  transform: scale(0.8) translateX(2rem) translateY(6rem);
+
+  box-shadow: 0rem 1.5rem 7rem rgba($color-white, 0.45);
+
+  background: rgba($color: #ff4d5a, $alpha: 0.2);
 
   &__side {
-    height: 75vh;
+    height: 25rem;
     transition: all 0.8s ease;
     position: absolute;
     top: 0;
@@ -54,6 +61,7 @@
 
   &:hover &__side--front {
     transform: rotateY(-180deg);
+    box-shadow: -2rem -1.5rem 4rem rgba($color-white, 0.45);
   }
 
   &:hover &__side--back {
@@ -73,29 +81,38 @@
     &--1 {
       background-image: linear-gradient(
           to right bottom,
-          $color-secondary-light,
-          $color-secondary-dark
+          rgba(#172d47, 0.85),
+          rgba(185, 216, 255, 0.85)
         ),
         url(../../img/solveacrime.png);
     }
 
-    // &--2 {
-    //   background-image: linear-gradient(
-    //       to right bottom,
-    //       $color-primary-light,
-    //       $color-primary-dark
-    //     ),
-    //     url(../img/nat-6.jpg);
-    // }
+    &--2 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba(#172d47, 0.85),
+          rgba(185, 216, 255, 0.85)
+        ),
+        url(../../img/cyglass.png);
+    }
 
-    // &--3 {
-    //   background-image: linear-gradient(
-    //       to right bottom,
-    //       $color-tertiary-light,
-    //       $color-tertiary-dark
-    //     ),
-    //     url(../img/nat-7.jpg);
-    // }
+    &--3 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba(#172d47, 0.85),
+          rgba(185, 216, 255, 0.85)
+        ),
+        url(../../img/mindspark.jpeg);
+    }
+
+    &--4 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba(#172d47, 0.85),
+          rgba(185, 216, 255, 0.85)
+        ),
+        url(../../img/gogoad.png);
+    }
   }
 
   &__heading {
@@ -116,11 +133,7 @@
     box-decoration-break: clone;
 
     &--1 {
-      background-image: linear-gradient(
-        to right bottom,
-        rgba($color-secondary-light, 0.85),
-        rgba($color-secondary-dark, 0.85)
-      );
+      background-image: linear-gradient(to right bottom, #fdb2b7, #ff4d5a);
     }
 
     &--2 {
@@ -230,4 +243,35 @@
       font-size: 4rem;
     }
   }
+}
+
+// .section2 {
+//   height: 100%;
+//   transform: translateX(-8rem) translateY(5rem);
+//   z-index: 20;
+//   position: relative;
+//   border-radius: 2rem;
+//   padding-bottom: 10rem;
+//   padding-right: 2rem;
+//   // background: rgba($color: #0a2143, $alpha: 0.93);
+// }
+
+.section2 {
+  height: 90%;
+  width: 100%;
+  margin-top: 7%;
+  z-index: 20;
+  position: relative;
+  // background-image: linear-gradient(
+  //   to left top,
+  //   rgba(#d9822b, 0.85),
+  //   rgba(#f3d12a, 0.85)
+  // );
+  border-radius: 2rem;
+  background-image: linear-gradient(
+    to left top,
+    rgba(#172d47, 0.85),
+    rgba(185, 216, 255, 0.85)
+  );
+  border: solid 0.6rem #dae5fe;
 }

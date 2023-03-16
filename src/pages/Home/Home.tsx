@@ -2,6 +2,8 @@ import { useRef, useState } from "react";
 import PrevWorks from "../../components/PrevWorks/PrevWorks";
 
 import "./Home.scss";
+import astroMoon from "../../img/astro.png";
+import rocket from "../../img/rocket.svg";
 
 const Home = () => {
   const layer1: any = [useRef(""), useRef(""), useRef("")];
@@ -202,7 +204,7 @@ const Home = () => {
   };
 
   const handleLayer2 = (event: any) => {
-    const x0 = 1.5 - event.clientX / 1050;
+    const x0 = 3 - event.clientX / 1050;
 
     const y0 = 32 - event.clientY / 1050;
 
@@ -328,7 +330,7 @@ const Home = () => {
                   id="screen-3"
                   className={`leave hide heading-primary main-title`}
                 >
-                  <span className="heading-primary--main font-size-6">
+                  <span className="heading-primary--main font-size-4 letter-space-1">
                     <span style={{ whiteSpace: "nowrap" }}>Skills &</span>
                     <br />
                     Expertise
@@ -338,14 +340,17 @@ const Home = () => {
                     <span className="red-line2"></span>
                   </div>
                   <span className="heading-primary--sub">
-                    Technologies / <br /> Programming Languages.
+                    Technologies / <br /> Programming
+                    <br />
+                    Languages.
                   </span>
                 </h1>
+
                 <h1
                   id="screen-2"
                   className={`leave hide heading-primary main-title`}
                 >
-                  <span className="heading-primary--main font-size-6">
+                  <span className="heading-primary--main font-size-4 letter-space-1">
                     Previous <br />
                     Works
                   </span>
@@ -356,12 +361,19 @@ const Home = () => {
                   <span className="heading-primary--sub">
                     Projects / <br /> Web Applications.
                   </span>
+
+                  <button className="primary-btn"></button>
+
+                  <div className="wrap">
+                    <button className="button">Show me more</button>
+                  </div>
                 </h1>
+
                 <h1
                   id="screen-4"
                   className={`leave hide heading-primary main-title`}
                 >
-                  <span className="heading-primary--main font-size-6">
+                  <span className="heading-primary--main font-size-4 letter-space-1">
                     Blog
                   </span>
                   <div className="red-line-seperation">
@@ -369,14 +381,17 @@ const Home = () => {
                     <span className="red-line2"></span>
                   </div>
                   <span className="heading-primary--sub">
-                    Articles / <br /> Learnings & Resourses.
+                    Articles / <br /> Learnings &
+                    <br />
+                    Resourses.
                   </span>
                 </h1>
+
                 <h1
                   id="screen-5"
                   className={`leave hide heading-primary main-title`}
                 >
-                  <span className="heading-primary--main font-size-6">
+                  <span className="heading-primary--main font-size-4 letter-space-1">
                     <span style={{ whiteSpace: "nowrap" }}>Get in</span>
                     <br />
                     touch
@@ -389,6 +404,8 @@ const Home = () => {
                     dnsh4989@gmail.com / <br /> twitter & linkedin.
                   </span>
                 </h1>
+
+                {/* <div className="plannets-outline"></div> */}
               </div>
             </div>
             <div className="col-3-of-4">
@@ -404,13 +421,18 @@ const Home = () => {
                               <div className="crate-2"></div>
                               <div className="crate-3"></div>
                             </div>
+                            {/* {screenNumber !== 1 && (
+                              <div className="astro-moon">
+                                <img src={astroMoon} />
+                              </div>
+                            )} */}
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div id="content-1" className="content-container">
+                <div className="content-container">
                   <div className="circle-it">
                     <div className="back-clouds">
                       <div className="cloud-4" ref={layer4[0]}></div>
@@ -423,21 +445,25 @@ const Home = () => {
                       <div className="cloud-3" ref={layer1[2]}></div>
                     </div>
 
-                    <h1 className="heading-primary--red" ref={layer2[0]}>
+                    <h1
+                      id="content-1"
+                      className="heading-primary--red"
+                      ref={layer2[0]}
+                    >
                       PORTFOLIO
                     </h1>
                   </div>
                 </div>
-                <div className="hide content-container" id="content-2">
+                <div className="hide content-container right-0" id="content-2">
                   <PrevWorks />
                 </div>
-                <div className="hide content-container" id="content-3">
+                <div className="hide content-container right-0" id="content-3">
                   <PrevWorks />
                 </div>
-                <div className="hide content-container" id="content-4">
+                <div className="hide content-container right-0" id="content-4">
                   <PrevWorks />
                 </div>
-                <div className="hide content-container" id="content-5">
+                <div className="hide content-container right-0" id="content-5">
                   <PrevWorks />
                 </div>
                 <div className="dots-container" ref={layer5[0]}>
@@ -468,6 +494,9 @@ const Home = () => {
             </div>
           </div>
         </header>
+      </div>
+      <div>
+        <img className="rocket" src={rocket} />
       </div>
     </>
   );

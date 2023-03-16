@@ -110,3 +110,25 @@
     opacity: 1;
   }
 }
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    // transform-origin: 2% 4%;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    // transform-origin: 0% 40%;
+  }
+}
+
+@keyframes rocket-motion {
+  0% {
+    transform: translateY(400%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}

@@ -95,6 +95,20 @@ ORDER: Base + typography > general layout + grid > page layout > components
     transform: translateY(100%);
     opacity: 1; } }
 
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes rocket-motion {
+  0% {
+    transform: translateY(400%); }
+  100% {
+    transform: translateY(-100%); } }
+
 *,
 *::after,
 *::before {
@@ -163,7 +177,7 @@ body {
     color: #fe4d5a;
     font-size: 5rem;
     position: absolute;
-    left: 1.5rem;
+    left: 3rem;
     top: 32rem;
     z-index: 5;
     text-shadow: 0.1rem 0.4rem 1.2rem rgba(0, 0, 0, 0.56); }
@@ -225,19 +239,19 @@ body {
   .row [class^="col-"] {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
-      margin-right: 6rem; }
+      margin-right: 2rem; }
   .row .col-1-of-2 {
-    width: calc((100% - 6rem) / 2); }
+    width: calc((100% - 2rem) / 2); }
   .row .col-1-of-3 {
-    width: calc((100% - 2 * 6rem) / 3); }
+    width: calc((100% - 2 * 2rem) / 3); }
   .row .col-2-of-3 {
-    width: calc( 2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+    width: calc( 2 * ((100% - 2 * 2rem) / 3) + 2rem); }
   .row .col-1-of-4 {
-    width: calc((100% - 3 * 6rem) / 4); }
+    width: calc((100% - 3 * 2rem) / 4); }
   .row .col-2-of-4 {
-    width: calc( 2 * ((100% - 3 * 6rem) / 4) + 6rem); }
+    width: calc( 2 * ((100% - 3 * 2rem) / 4) + 2rem); }
   .row .col-3-of-4 {
-    width: calc( 3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
+    width: calc( 3 * ((100% - 3 * 2rem) / 4) + 2 * 2rem); }
 
 .header {
   height: 100vh;
