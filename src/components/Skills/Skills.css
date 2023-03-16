@@ -599,5 +599,5 @@ body {
   z-index: 20;
   position: relative;
   border-radius: 2rem;
-  background-image: linear-gradient(to left top, rgba(23, 45, 71, 0.85), rgba(102, 121, 145, 0.85));
+  background-image: linear-gradient(to left top, rgba(23, 45, 71, 0.85), rgba(185, 216, 255, 0.85));
   border: solid 0.6rem #dae5fe; }

@@ -4,6 +4,7 @@ import PrevWorks from "../../components/PrevWorks/PrevWorks";
 import "./Home.scss";
 import astroMoon from "../../img/astro.png";
 import rocket from "../../img/rocket.svg";
+import Skills from "../../components/Skills/Skills";
 
 const Home = () => {
   const layer1: any = [useRef(""), useRef(""), useRef("")];
@@ -362,8 +363,6 @@ const Home = () => {
                     Projects / <br /> Web Applications.
                   </span>
 
-                  <button className="primary-btn"></button>
-
                   <div className="wrap">
                     <button className="button">Show me more</button>
                   </div>
@@ -458,7 +457,7 @@ const Home = () => {
                   <PrevWorks />
                 </div>
                 <div className="hide content-container right-0" id="content-3">
-                  <PrevWorks />
+                  <Skills />
                 </div>
                 <div className="hide content-container right-0" id="content-4">
                   <PrevWorks />
