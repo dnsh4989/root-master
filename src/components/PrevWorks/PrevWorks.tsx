@@ -14,25 +14,14 @@ function PrevWorks() {
                   SOLVE <br />A CRIME
                 </span>
               </h4>
-              <div className="card__details">
-                <ul>
-                  <li>3 day tours</li>
-                  <li>Up to 30 people</li>
-                  <li>2 tour guides</li>
-                  <li>Sleep in cozy hotels</li>
-                  <li>Difficulty: easy</li>
-                </ul>
-              </div>
             </div>
             <div className="card__side card__side--back card__side--back-1">
               <div className="card__cta">
                 <div className="card__price-box">
-                  <p className="card__price-only">Only</p>
-                  <p className="card__price-value">$297</p>
+                  <p className="card__price-only">Technologies</p>
+                  <p className="card__price-value">ReactJS, Redux, NextJS..</p>
                 </div>
-                <a href="#popup" className="btn btn--white">
-                  Book now!
-                </a>
+                <button className="button">View All Details!</button>
               </div>
             </div>
           </div>
@@ -47,25 +36,16 @@ function PrevWorks() {
                   CyGlass
                 </span>
               </h4>
-              <div className="card__details">
-                <ul>
-                  <li>7 day tours</li>
-                  <li>Up to 40 people</li>
-                  <li>6 tour guides</li>
-                  <li>Sleep in provided tents</li>
-                  <li>Difficulty: medium</li>
-                </ul>
-              </div>
             </div>
             <div className="card__side card__side--back card__side--back-1">
               <div className="card__cta">
                 <div className="card__price-box">
-                  <p className="card__price-only">Only</p>
-                  <p className="card__price-value">$497</p>
+                  <p className="card__price-only">Technologies</p>
+                  <p className="card__price-value">
+                    ReactJS, Remix, Styled Components..
+                  </p>
                 </div>
-                <a href="#popup" className="btn btn--white">
-                  Book now!
-                </a>
+                <button className="button">View All Details!</button>
               </div>
             </div>
           </div>
@@ -84,25 +64,16 @@ function PrevWorks() {
                   Spark
                 </span>
               </h4>
-              <div className="card__details">
-                <ul>
-                  <li>5 day tours</li>
-                  <li>Up to 15 people</li>
-                  <li>3 tour guides</li>
-                  <li>Sleep in provided tents</li>
-                  <li>Difficulty: hard</li>
-                </ul>
-              </div>
             </div>
             <div className="card__side card__side--back card__side--back-1">
               <div className="card__cta">
                 <div className="card__price-box">
-                  <p className="card__price-only">Only</p>
-                  <p className="card__price-value">$897</p>
+                  <p className="card__price-only">Technologies</p>
+                  <p className="card__price-value">
+                    Angular, Redux, TypeScript
+                  </p>
                 </div>
-                <a href="#popup" className="btn btn--white">
-                  Book now!
-                </a>
+                <button className="button">View All Details!</button>
               </div>
             </div>
           </div>
@@ -117,25 +88,16 @@ function PrevWorks() {
                   GoGoAds
                 </span>
               </h4>
-              <div className="card__details">
-                <ul>
-                  <li>7 day tours</li>
-                  <li>Up to 40 people</li>
-                  <li>6 tour guides</li>
-                  <li>Sleep in provided tents</li>
-                  <li>Difficulty: medium</li>
-                </ul>
-              </div>
             </div>
             <div className="card__side card__side--back card__side--back-1">
               <div className="card__cta">
                 <div className="card__price-box">
-                  <p className="card__price-only">Only</p>
-                  <p className="card__price-value">$497</p>
+                  <p className="card__price-only">Technologies</p>
+                  <p className="card__price-value">
+                    Angular, Material UI, ProgressiveWebApp..
+                  </p>
                 </div>
-                <a href="#popup" className="btn btn--white">
-                  Book now!
-                </a>
+                <button className="button">View All Details!</button>
               </div>
             </div>
           </div>
