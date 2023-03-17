@@ -597,21 +597,7 @@ body {
   width: 100%;
   margin-top: 7%;
   z-index: 20;
-  position: relative; }
-
-.section2::before {
-  content: "";
-  position: absolute;
-  /* set the pseudo-element to absolute position */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
+  position: relative;
   border-radius: 2rem;
-  background-image: radial-gradient(circle at center, rgba(23, 45, 71, 0.85), rgba(23, 45, 71, 0.85)), url(../../img/skills.jpeg);
-  border: solid 0.6rem #dae5fe;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 90rem;
-  opacity: 0.75; }
+  background-image: linear-gradient(to left top, rgba(23, 45, 71, 0.85), rgba(102, 121, 145, 0.85));
+  border: solid 0.6rem #dae5fe; }

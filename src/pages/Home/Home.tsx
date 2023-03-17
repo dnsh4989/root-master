@@ -5,6 +5,7 @@ import "./Home.scss";
 import astroMoon from "../../img/astro.png";
 import rocket from "../../img/rocket.svg";
 import Skills from "../../components/Skills/Skills";
+import Blog from "../../components/Blog/Blog";
 
 const Home = () => {
   const layer1: any = [useRef(""), useRef(""), useRef("")];
@@ -460,7 +461,7 @@ const Home = () => {
                   <Skills />
                 </div>
                 <div className="hide content-container right-0" id="content-4">
-                  <PrevWorks />
+                  <Blog />
                 </div>
                 <div className="hide content-container right-0" id="content-5">
                   <PrevWorks />

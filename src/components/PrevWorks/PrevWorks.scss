@@ -245,33 +245,32 @@
   }
 }
 
-// .section2 {
-//   height: 100%;
-//   transform: translateX(-8rem) translateY(5rem);
-//   z-index: 20;
-//   position: relative;
-//   border-radius: 2rem;
-//   padding-bottom: 10rem;
-//   padding-right: 2rem;
-//   // background: rgba($color: #0a2143, $alpha: 0.93);
-// }
-
 .section2 {
   height: 90%;
   width: 100%;
   margin-top: 7%;
   z-index: 20;
   position: relative;
-  // background-image: linear-gradient(
-  //   to left top,
-  //   rgba(#d9822b, 0.85),
-  //   rgba(#f3d12a, 0.85)
-  // );
+}
+
+.section2::before {
+  content: "";
+  position: absolute; /* set the pseudo-element to absolute position */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
   border-radius: 2rem;
-  background-image: linear-gradient(
-    to left top,
-    rgba(#172d47, 0.85),
-    rgba(102, 121, 145, 0.85)
-  );
+  background-image: radial-gradient(
+      circle at center,
+      rgba(#172d47, 0.85),
+      rgba(#172d47, 0.85)
+    ),
+    url(../../img/skills.jpeg);
   border: solid 0.6rem #dae5fe;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90rem;
+  opacity: 0.75;
 }

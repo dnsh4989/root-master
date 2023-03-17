@@ -28,6 +28,10 @@ function Skills() {
               <span className="blueline jquery"></span>
               <em>jQuery</em>
             </li>
+            <li>
+              <span className="blueline jquery"></span>
+              <em>ReactJS</em>
+            </li>
           </ul>
         </div>
         <div className="col">
