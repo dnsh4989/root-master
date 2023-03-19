@@ -6,6 +6,7 @@ import astroMoon from "../../img/astro.png";
 import rocket from "../../img/rocket.svg";
 import Skills from "../../components/Skills/Skills";
 import Blog from "../../components/Blog/Blog";
+import ContactMe from "../../components/ContactMe/ContactMe";
 
 const Home = () => {
   const layer1: any = [useRef(""), useRef(""), useRef("")];
@@ -374,7 +375,7 @@ const Home = () => {
                   className={`leave hide heading-primary main-title`}
                 >
                   <span className="heading-primary--main font-size-4 letter-space-1">
-                    Blog
+                    Blogs
                   </span>
                   <div className="red-line-seperation">
                     <span className="red-line"></span>
@@ -464,7 +465,7 @@ const Home = () => {
                   <Blog />
                 </div>
                 <div className="hide content-container right-0" id="content-5">
-                  <PrevWorks />
+                  <ContactMe />
                 </div>
                 <div className="dots-container" ref={layer5[0]}>
                   <div className="dots dot-1"></div>
