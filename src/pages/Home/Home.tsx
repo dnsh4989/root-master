@@ -7,8 +7,14 @@ import rocket from "../../img/rocket.svg";
 import Skills from "../../components/Skills/Skills";
 import Blog from "../../components/Blog/Blog";
 import ContactMe from "../../components/ContactMe/ContactMe";
+import { useNavigate } from "react-router";
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  console.log(document);
+  document.getElementsByTagName("html")[0].style.overflow = "hidden";
+
   const layer1: any = [useRef(""), useRef(""), useRef("")];
   const layer2: any = [useRef("")];
   const layer3: any = [useRef("")];
@@ -184,6 +190,14 @@ const Home = () => {
     handleLayer5(event);
   };
 
+  const goToBlogs = (): any => {
+    navigate("/blogs");
+  };
+
+  const goToHome = (): any => {
+    navigate("/");
+  };
+
   const handleLayer1 = (event: any) => {
     const x0 = -15 + event.clientX / 400;
     const x1 = 24 + event.clientX / 400;
@@ -271,6 +285,10 @@ const Home = () => {
             id="navi-toggle"
           />
 
+          <span className="blogs-link" onClick={goToBlogs}>
+            Blogs
+          </span>
+
           <label htmlFor="navi-toggle" className="navigation__button">
             <span className="navigation__icon">&nbsp;</span>
           </label>
@@ -310,7 +328,9 @@ const Home = () => {
 
         <header className="header">
           <div className="header__logo-box">
-            <span className="header__logo">Dinesh SanaLa</span>
+            <span className="header__logo" onClick={goToHome}>
+              Dinesh SanaLa
+            </span>
           </div>
           <div className="row">
             <div className="col-1-of-4">
@@ -366,7 +386,7 @@ const Home = () => {
                   </span>
 
                   <div className="wrap">
-                    <button className="button">Show me more</button>
+                    <button className="btn">Show me more</button>
                   </div>
                 </h1>
 
@@ -386,6 +406,12 @@ const Home = () => {
                     <br />
                     Resourses.
                   </span>
+
+                  <div className="wrap">
+                    <button className="btn" onClick={goToBlogs}>
+                      View All Articles
+                    </button>
+                  </div>
                 </h1>
 
                 <h1
