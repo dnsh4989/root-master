@@ -194,6 +194,10 @@ const Home = () => {
     navigate("/blogs");
   };
 
+  const goToProjects = (): any => {
+    navigate("/projects");
+  };
+
   const goToHome = (): any => {
     navigate("/");
   };
@@ -386,7 +390,9 @@ const Home = () => {
                   </span>
 
                   <div className="wrap">
-                    <button className="btn">Show me more</button>
+                    <button className="btn" onClick={goToProjects}>
+                      Show me more
+                    </button>
                   </div>
                 </h1>
 
