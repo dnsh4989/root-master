@@ -1,5 +1,6 @@
 import LandingPage from "../../components/LandingPage/LandingPage";
 import "./Blogs.scss";
+import Header from "../../components/Header/Header";
 
 const Blogs = () => {
   console.log(document);
@@ -7,11 +8,8 @@ const Blogs = () => {
 
   return (
     <>
+      <Header />
       <div className="blogs-main">
-        <div className="header__logo-box">
-          <span className="header__logo">Dinesh SanaLa</span>
-        </div>
-
         <div className="band" style={{ display: "block" }}>
           <div className="search-container" style={{ width: "100%" }}>
             <div className="Card">

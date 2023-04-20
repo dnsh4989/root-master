@@ -107,3 +107,13 @@
   font-size: 2.5rem;
   text-decoration: underline;
   text-decoration-color: #cc6665; }
+
+.landing-page-container {
+  position: absolute;
+  top: 0;
+  right: 10rem;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to bottom, #092141, #050b17);
+  background-size: cover;
+  background-position: top; }

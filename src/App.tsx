@@ -3,7 +3,6 @@ import "./App.scss";
 import Blogs from "./pages/Blogs/Blogs";
 import Home from "./pages/Home/Home";
 import Projects from "./pages/Projects/Projects";
-import "./styles/main-styles.scss";
 
 function App() {
   return (

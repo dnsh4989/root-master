@@ -9,7 +9,7 @@
 .moon {
   position: relative;
   top: 4rem;
-  right: 2rem;
+  right: -15rem;
   animation-name: moveInLeft;
   animation-duration: 1s;
   animation-timing-function: ease-out; }
