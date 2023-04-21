@@ -1,4 +1,3 @@
-import LandingPage from "../../components/LandingPage/LandingPage";
 import "./Blogs.scss";
 import Header from "../../components/Header/Header";
 

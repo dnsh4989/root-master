@@ -10,3 +10,9 @@
   text-decoration: underline;
   text-decoration-color: #cc6665;
 }
+.nav_header {
+  position: absolute;
+  z-index: 10;
+  white-space: nowrap;
+  cursor: pointer;
+}
