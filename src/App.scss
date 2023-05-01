@@ -1,3 +1,7 @@
+@import "./Variables.module.scss";
+body {
+  background: rgba($color-primary-light, 1);
+}
 .main-container {
   overflow: hidden;
 }
