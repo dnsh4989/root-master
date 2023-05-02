@@ -2,7 +2,6 @@ import { useRef, useState } from "react";
 import PrevWorks from "../../components/PrevWorks/PrevWorks";
 
 import "./Home.scss";
-import astroMoon from "../../img/astro.png";
 import rocket from "../../img/rocket.svg";
 import Skills from "../../components/Skills/Skills";
 import Blog from "../../components/Blog/Blog";
