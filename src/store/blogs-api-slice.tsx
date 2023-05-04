@@ -9,7 +9,13 @@ export const apiSlice: any = createApi({
 
   endpoints: (builder) => ({
     fetchBlogs: builder.query<Blog[], number | void>({
-      query: () => `/subscriber/articles/frontend/`,
+      query: () => `/subscriber/articles/backend/`,
+    }),
+    fetchBlogById: builder.query<Blog[], number | void>({
+      query: (id: any) => ({
+        url: `/subscriber/articles/details/${id}`,
+        method: "GET",
+      }),
     }),
     addBlog: builder.query<Blog[], number | void>({
       query: (payload: any) => ({
@@ -37,6 +43,7 @@ export const apiSlice: any = createApi({
 
 export const {
   useFetchBlogsQuery,
+  useFetchBlogByIdQuery,
   useAddBlogQuery,
   useEditBlogQuery,
   useDeleteBlogQuery,

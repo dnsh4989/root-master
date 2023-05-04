@@ -1,26 +1,20 @@
 import "./Blogs.scss";
 import Header from "../../components/Header/Header";
-import { useEffect } from "react";
-import { fetchBlogPosts } from "../../store/blogs-actions";
-import { useAppDispatch, useAppSelector } from "../../shared/hooks/hooks";
 import { useFetchBlogsQuery } from "../../store/blogs-api-slice";
 import { Blog } from "../../shared/interfaces/blogs.interface";
+import { useNavigate } from "react-router";
 
 const Blogs = () => {
-  const dispatch = useAppDispatch();
-
-  console.log(document);
+  const navigate = useNavigate();
   document.getElementsByTagName("html")[0].style.overflow = "scroll";
-
-  const articles = useAppSelector((state: any) => state.articles);
 
   const { data = [], isFetching } = useFetchBlogsQuery();
 
   console.log(data);
 
-  useEffect(() => {
-    dispatch(fetchBlogPosts());
-  }, [dispatch]);
+  const goToBlogPage = (id: string) => {
+    navigate(`/blogs/${id}`);
+  };
 
   return (
     <>
@@ -59,25 +53,23 @@ const Blogs = () => {
         </div>
 
         <div className="band">
-          {data.map((article: Blog) => {
-            return (
-              <div className={"item-" + article.id} key={article.id}>
-                <a href={article.image} className="card2">
-                  <div
-                    className="thumb"
-                    style={{
-                      backgroundImage:
-                        "url(https://live.staticflickr.com/65535/52756975910_69de8f798a_c.jpg)",
-                    }}
-                  ></div>
-                  <article>
-                    <h1>{article.title}</h1>
-                    <span>{article.description}</span>
-                  </article>
-                </a>
-              </div>
-            );
-          })}
+          {data?.data &&
+            data.data.map((article: Blog) => {
+              const thumbnailStyle = {
+                backgroundImage: `url('${article.image}')`,
+              };
+              return (
+                <div className={"item-" + article.id} key={article.id}>
+                  <a onClick={() => goToBlogPage(article.id)} className="card2">
+                    <div className="thumb" style={thumbnailStyle}></div>
+                    <article>
+                      <h1>{article.title}</h1>
+                      <span>{article.description}</span>
+                    </article>
+                  </a>
+                </div>
+              );
+            })}
         </div>
       </div>
     </>
