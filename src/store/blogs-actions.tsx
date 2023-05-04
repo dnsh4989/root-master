@@ -1,42 +1,42 @@
-import { cartActions } from "./blogs-slice";
+import { articleActions } from "./blogs-slice";
 import { uiActions } from "./ui-slice";
 
-export const fetchCartData = () => {
-  return async (dispatch) => {
+export const fetchBlogPosts = () => {
+  return async (dispatch: any) => {
     const fetchData = async () => {
       const response = await fetch(
-        "https://test-db-8d88d.firebaseio.com/cart.json",
+        "http://127.0.0.1:8001/api/subscriber/articles/frontend/",
         {
           method: "GET",
         }
       );
 
       if (!response.ok) {
-        throw new Error("Couldn't fetch cart data!");
+        throw new Error("Couldn't fetch blog posts!");
       }
 
-      const data = await response.json();
+      const data: any = await response.json();
 
       return data;
     };
 
     try {
-      const cartData = await fetchData();
-      dispatch(cartActions.replaceCart(cartData));
+      const blogPosts = await fetchData();
+      dispatch(articleActions.replaceAllArticles(blogPosts));
     } catch (error) {
       dispatch(
         uiActions.showNotification({
           status: "error",
           title: "Error..!",
-          message: "Fetching cart data failed..!!",
+          message: "Fetching blog posts failed..!!",
         })
       );
     }
   };
 };
 
-export const sendCartData = (cart) => {
-  return async (dispatch) => {
+export const sendCartData = (cart: any) => {
+  return async (dispatch: any) => {
     dispatch(
       uiActions.showNotification({
         status: "pending",

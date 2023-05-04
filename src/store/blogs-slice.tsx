@@ -13,9 +13,11 @@ const blogSlice = createSlice({
       state.articles = action.payload.articles;
     },
 
-    addArticle(state, action) {
+    addArticle(state: any, action) {
       const newItem = action.payload;
-      const existingItem = state.items.find((item) => item.id === newItem.id);
+      const existingItem = state.items.find(
+        (item: any) => item.id === newItem.id
+      );
       state.totalArticles++;
       if (!existingItem) {
         state.items.push({
@@ -31,12 +33,12 @@ const blogSlice = createSlice({
       }
     },
 
-    deleteArticle(state, action) {
+    deleteArticle(state: any, action) {
       const id = action.payload;
-      const existingItem = state.items.find((item) => item.id === id);
+      const existingItem = state.items.find((item: any) => item.id === id);
       state.totalArticles--;
       if (existingItem.quantity === 1) {
-        state.items = state.items.filter((item) => item.id !== id);
+        state.items = state.items.filter((item: any) => item.id !== id);
       } else {
         existingItem.quantity--;
         existingItem.total = existingItem.total - existingItem.price;

@@ -1,4 +1,3 @@
-import React, { LegacyRef, useEffect, useRef, useState } from "react";
 import "./Blog.scss";
 
 function Blog() {
