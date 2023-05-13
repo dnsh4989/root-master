@@ -865,4 +865,5 @@ blockquote > span::after {
 .rich-editor-text p {
   clear: both;
   line-height: 24px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  font-size: 2rem; }

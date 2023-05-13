@@ -8,6 +8,15 @@ const Details = () => {
 
   const { data = [], isFetching } = useFetchBlogByIdQuery(id);
 
+  const enrichedContent = data[0]?.content
+    .split("<p>")
+    .splice(1, data[0]?.content.length - 1)
+    .map((para: string) => {
+      return <p>{para.split("</p>")[0]}</p>;
+    });
+
+  console.log(enrichedContent);
+
   console.log(data);
 
   return (
@@ -61,65 +70,7 @@ const Details = () => {
                 </div>
               </div>
               <div className="cs-post-option-panel">
-                <div className="rich-editor-text">
-                  <p>
-                    Ravenously while stridently coughed far promiscuously below
-                    jeez much yikes bland that salamander cunningly some over
-                    abhorrent as house with between ouch that well scurrilously
-                    alas capybara massive outdid oh said hello majestically
-                    roadrunner lobster much bled alas lighted together waved
-                    upheld more far woolly ahead darn far far bore far far saw
-                    baneful upset rebound bowed possessive before or
-                    indisputably against.
-                  </p>
-                  <p>
-                    After hamster hello less far astride where accordingly much
-                    because some far innocently invoked far pre-set or objective
-                    this pangolin tendentiously eagle near spread and overlay as
-                    abysmal a and before walrus much therefore some close
-                    victorious jeepers deeply forward while jeez and overlaid
-                    save hey ritually notwithstanding mounted about nonchalantly
-                    and less hence far like hey kissed. Hello impotent ravenous
-                    hey accordingly well much lopsidedly one far blinked
-                    lorikeet sternly futile jeepers strewed well following
-                    subconscious far on egregiously and away far alas much
-                    forward in but far opposite less editorial some together.
-                  </p>
-                  <h4>Simple answer is, because other candidates won’t.</h4>
-                  <p>
-                    Ravenously while stridently coughed far promiscuously below
-                    jeez much yikes bland that salamander cunningly some over
-                    abhorrent as house with between ouch that well scurrilously
-                    alas capybara massive outdid oh said hello majestically
-                    roadrunner lobster much bled alas lighted together waved
-                    upheld.
-                  </p>
-                  <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <blockquote className="text-left-align">
-                      <span>
-                        {" "}
-                        Ravenously while stridently coughed far promiscuously
-                        below jeez much yikes bland that salamander cunningly
-                        some over abhorrent as house with between ouch that well
-                        scurrilously alas capybara massive outdid oh said hello
-                        majestically roadrunner lobster much bled alas lighted
-                        together waved upheld.
-                      </span>
-                      <span className="author-name">
-                        {" "}
-                        <a href="#">-- Robert Deneairo</a>
-                      </span>
-                    </blockquote>
-                  </div>
-                  <p>
-                    Ravenously while stridently coughed far promiscuously below
-                    jeez much yikes bland that salamander cunningly some over
-                    abhorrent as house with between ouch that well scurrilously
-                    alas capybara massive outdid oh said hello majestically
-                    roadrunner lobster much bled alas lighted together waved
-                    upheld.
-                  </p>
-                </div>
+                <div className="rich-editor-text">{enrichedContent}</div>
               </div>
               <div className="cs-tags">
                 <div className="tags">
