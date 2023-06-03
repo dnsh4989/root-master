@@ -70,6 +70,7 @@ const Details = () => {
                 </div>
               </div>
               <div className="cs-post-option-panel">
+                <h1 className="article-title">{data[0]?.title}</h1>
                 <div className="rich-editor-text">{enrichedContent}</div>
               </div>
               <div className="cs-tags">

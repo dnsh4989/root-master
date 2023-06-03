@@ -867,3 +867,7 @@ blockquote > span::after {
   line-height: 24px;
   margin-bottom: 20px;
   font-size: 2rem; }
+
+.article-title {
+  font-size: 3.5rem;
+  margin-bottom: 3.5rem; }
