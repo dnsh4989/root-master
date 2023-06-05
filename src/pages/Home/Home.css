@@ -97,7 +97,7 @@
   transform: translateY(-7px); }
 
 .blogs-link {
-  position: fixed;
+  position: absolute;
   top: 3.5rem;
   right: 15rem;
   z-index: 2000;
