@@ -37,25 +37,6 @@ const Details = () => {
                 </figure>
               </div>
               <div className="cs-post-title">
-                <div className="cs-author">
-                  <figure>
-                    <a href="http://jobcareer.chimpgroup.com/jobdoor/user/jobcareer-admin/">
-                      <img
-                        width="32"
-                        height="32"
-                        data-pagespeed-url-hash="1229941675"
-                        className="avatar avatar-32 photo"
-                        src="http://1.gravatar.com/avatar/7a20fad302fc2dd4b4649dc5bdb3c463?s=32&amp;d=mm&amp;r=g"
-                        alt=""
-                      />
-                    </a>
-                  </figure>
-                  <div className="cs-text">
-                    <a href="http://jobcareer.chimpgroup.com/jobdoor/user/jobcareer-admin/">
-                      Julia Andrason
-                    </a>
-                  </div>
-                </div>
                 <div className="post-option">
                   <span className="post-date">
                     <a href="http://jobcareer.chimpgroup.com/jobdoor/2015/11/">
