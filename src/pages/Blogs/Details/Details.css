@@ -874,3 +874,6 @@ blockquote > span::after {
 
 .header__logo-box {
   position: absolute; }
+
+.article-content .container {
+  padding-bottom: 0; }

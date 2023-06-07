@@ -8,12 +8,18 @@ const Details = () => {
 
   const { data = [], isFetching } = useFetchBlogByIdQuery(id);
 
-  const enrichedContent = data[0]?.content
-    .split("<p>")
-    .splice(1, data[0]?.content.length - 1)
-    .map((para: string) => {
-      return <p>{para.split("</p>")[0]}</p>;
-    });
+  let enrichedContent;
+
+  if (data[0]?.content.split("<p>").length > 1) {
+    enrichedContent = data[0]?.content
+      .split("<p>")
+      .splice(1, data[0]?.content.length - 1)
+      .map((para: string) => {
+        return <p>{para.split("</p>")[0]}</p>;
+      });
+  } else {
+    enrichedContent = data[0]?.content;
+  }
 
   console.log(enrichedContent);
 
