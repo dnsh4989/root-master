@@ -285,7 +285,7 @@ const Home = () => {
               <div className="header__text-box">
                 <h1 id="screen-1" className={`heading-primary main-title`}>
                   <span className="heading-primary--main">
-                    DineSh <br />
+                    DiNesh <br />
                     SanaLa
                   </span>
                   <div className="red-line-seperation">
