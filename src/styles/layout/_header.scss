@@ -29,6 +29,12 @@
 
   &__logo {
     font-size: 2.4rem;
+    text-decoration: underline;
+    text-decoration-color: #cc6665;
+    text-decoration-thickness: .3rem;
+    &:hover {
+      font-size: 2.55rem;
+    }
   }
 
   &__text-box {

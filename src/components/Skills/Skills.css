@@ -2868,7 +2868,13 @@ body {
   left: 4rem; }
 
 .header__logo {
-  font-size: 2.4rem; }
+  font-size: 2.4rem;
+  text-decoration: underline;
+  text-decoration-color: #cc6665;
+  text-decoration-thickness: .3rem; }
+
+.header__logo:hover {
+  font-size: 2.55rem; }
 
 .header__text-box {
   position: relative;
@@ -3303,17 +3309,6 @@ body {
     font-size: 1.4em; } }
 
 @media (max-width: 580px) {
-  h2 {
-    font-size: 1.1em;
-    padding: 10px 0; } }
-
-@media (max-width: 480px) {
-  h2 {
-    font-size: 2.2em;
-    padding: 10px 0 15px 0; }
-  .col {
-    width: 90%; } }
- (max-width: 580px) {
   h2 {
     font-size: 1.1em;
     padding: 10px 0; } }

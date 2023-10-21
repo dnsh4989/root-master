@@ -69,7 +69,7 @@ const Header = () => {
       <header className="nav_header">
         <div className="header__logo-box">
           <span className="header__logo" onClick={goToHome}>
-            DiNesh SaNala
+            DineSh SanaLa
           </span>
         </div>
       </header>

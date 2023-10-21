@@ -2884,7 +2884,13 @@ body {
   left: 4rem; }
 
 .header__logo {
-  font-size: 2.4rem; }
+  font-size: 2.4rem;
+  text-decoration: underline;
+  text-decoration-color: #cc6665;
+  text-decoration-thickness: .3rem; }
+
+.header__logo:hover {
+  font-size: 2.55rem; }
 
 .header__text-box {
   position: relative;
@@ -3024,14 +3030,6 @@ body {
   background-color: transparent; }
 
 .navigation__checkbox:checked + .navigation__button .navigation__icon::before {
-  top: 0;
-  transform: rotate(135deg); }
-
-.navigation__checkbox:checked + .navigation__button .navigation__icon::after {
-  top: 0;
-  transform: rotate(-135deg); }
-
-n .navigation__icon::before {
   top: 0;
   transform: rotate(135deg); }
 
