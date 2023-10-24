@@ -9,9 +9,8 @@
   font-size: 2.5rem;
   text-decoration: underline;
   text-decoration-color: #cc6665; }
-
-.blogs-link:hover {
-  font-size: 2.7rem; }
+  .blogs-link:hover {
+    font-size: 2.7rem; }
 
 .nav_header {
   position: absolute;
